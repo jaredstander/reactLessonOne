@@ -1,9 +1,11 @@
 <html>
+
   <head>
     <meta charset="utf-8"/>
     <script src="https://fb.me/react-15.2.1.js"></script>
     <script src="https://fb.me/react-dom-15.2.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script> -->
+    <script src="application.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   </head>
@@ -12,52 +14,9 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-5 target">
-
         </div>
       </div>
     </div>
   </body>
-
-  <script type="text/jsx">
-    var Thumbnail = React.createClass({
-      render: function(){
-        return <div className="thumbnail">
-          <img src={this.props.imageUrl} />
-          <div className="caption">
-            <h3>{this.props.header}</h3>
-            <p>{this.props.description}</p>
-            <p>
-              <Badge title={this.props.title} number={this.props.number} />
-            </p>
-          </div>
-        </div>
-      }
-    });
-
-    // define a react component class
-    var Badge = React.createClass({
-      render: function(){
-        this.props // {}
-        return <button className="btn btn-primary" type="button">
-                  {this.props.title} <span className="badge">{this.props.number}</span>
-                </button>
-      }
-    });
-
-    var options = {
-      title: "See Tutorials",
-      number: 32,
-      header: "Learn React",
-      description: "React!",
-      imageUrl: "https://cdn.auth0.com/blog/react-js/react.png"
-    };
-
-    // ask ract to render this class
-    var element = React.createElement(Thumbnail, options);
-
-    // when ask react to render this class,
-    // we will tell it where to place the rendered element in the DOM
-    ReactDOM.render(element, document.querySelector('.target'));
-  </script>
 
 </html>
